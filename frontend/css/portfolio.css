@@ -1,0 +1,688 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: #252930;
+    overflow-x: hidden;
+}
+
+.bateu_a_cara_e_viu {
+    width: 100%;
+    height: 100vh;
+}
+
+.bateu_a_cara_e_viu header {
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bateu_a_cara_e_viu header img {
+    width: 130px;
+
+}
+
+.bateu_a_cara_e_viu nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+.bateu_a_cara_e_viu nav ul li a:hover {
+    color: rgb(255, 217, 0);
+    border-bottom: 1px solid rgb(155, 135, 21);
+    transition: 0.5s;
+}
+
+.bateu_a_cara_e_viu nav a {
+    color: rgb(207, 207, 207);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.redes_sociais {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 20px;
+    bottom: 30px;
+    gap: 8px;
+}
+
+.redes_sociais .line {
+    width: 3px;
+    height: 100px;
+    background-color: rgb(255, 217, 0);
+    position: relative;
+    right: -17px;
+    bottom: 15px;
+}
+
+.redes_sociais img {
+    width: 40px;
+    height: 40px;
+}
+
+.redes_sociais img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#foto-deu {
+    position: absolute;
+    right: 140px;
+    bottom: 60px;
+    transform: scale(1.3);
+    z-index: -1;
+}
+
+.about-perfil {
+    position: absolute;
+    left: 300px;
+    top: 40%;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+.about-perfil span {
+    color: rgb(255, 217, 0);
+    font-size: 60px;
+    letter-spacing: 3px;
+}
+
+.about-perfil h1 {
+    letter-spacing: 2px;
+    font-size: 40px
+}
+
+.about-perfil h2 {
+    color: rgb(207, 207, 207);
+    width: 300px;
+    letter-spacing: 1px;
+}
+
+.about-perfil button {
+    background-color: transparent;
+    border: 3px rgb(255, 217, 0) solid;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: 800;
+}
+
+.about-perfil button:hover {
+    background-color: rgb(255, 217, 0);
+    color: rgb(0, 0, 0);
+    box-shadow: 11px 11px 5px 0 rgb(0, 0, 0);
+    transition: 0.6s;
+}
+
+.about {
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+    color: #FFFFFF;
+
+}
+
+.about .line {
+    height: 2.5px;
+    width: 50px;
+    background-color: rgba(255, 217, 0, 0.884);
+    position: relative;
+    top: 80px;
+}
+
+.about p {
+    position: relative;
+    left: 70px;
+    top: 3px;
+    min-width: 100px;
+    max-width: 1000px;
+    color: #EEEEEE;
+}
+
+.about h1 {
+    font-weight: 900;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about span {
+    color: rgba(255, 217, 0, 0.884);
+}
+
+.skills {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7%;
+}
+
+.skills h1 {
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+.skills .line {
+    width: 10%;
+    height: 2px;
+    background-color: rgb(211, 181, 12);
+    position: relative;
+    left: 50%;
+    top: 7px;
+    transform: translateX(-50%);
+}
+
+.skills .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.skills .cards .card {
+    display: flex;
+    flex-direction: column;
+    background: rgb(48, 48, 48);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+    height: 250px;
+}
+
+
+.skills .card img {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.cards .card:first-child img {
+    width: 200px;
+}
+
+.cards .card:first-child p {
+    position: relative;
+    bottom: 43px;
+}
+
+.cards .card:nth-child(2) img {
+    width: 140px;
+}
+
+.cards .card:nth-child(2) p {
+    position: relative;
+    bottom: 12px;
+}
+
+.cards .card:nth-child(3) p {
+    position: relative;
+    bottom: -5px;
+}
+
+.cards .card:nth-child(5) p {
+    position: relative;
+    bottom: -23px;
+}
+
+
+
+
+
+.skills .cards .card:hover {
+    background-color: rgb(211, 181, 12);
+    box-shadow: 0 1px 5px 0 #A88A55;
+    transition: 0.4s;
+}
+
+.portfolio {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+
+}
+
+.portfolio>h1 {
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.portfolio .line {
+    position: absolute;
+    height: 130px;
+    left: 9.3%;
+    margin-top: 30px;
+    width: 3px;
+    background-color: rgb(224, 193, 15);
+}
+
+.portfolio .line.portfolio {
+    position: absolute;
+    left: 90.7%;
+    margin-top: -135px;
+    height: 130px;
+    width: 3px;
+    background-color: rgb(224, 193, 15);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 25px;
+}
+
+.project {
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.781)),
+        var(--background);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(228, 228, 228);
+    padding: 50px;
+
+}
+
+.project:hover {
+    transform: scale(0.95);
+    transition: transform 0.5s ease;
+}
+
+
+.project h1 {
+    color: rgb(255, 217, 0);
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+}
+
+.portfolio button {
+    outline: none;
+    border: none;
+    background-color: rgb(224, 193, 15);
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    height: 40px;
+    color: #FFFFFF;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.portfolio button:hover {
+    color: rgb(224, 193, 15);
+    background-color: black;
+    box-shadow: 2px 2px 20px 0 rgba(255, 217, 0, 0.514);
+    transition: 0.6s;
+}
+
+.portfolio .verMaisProjetos {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+    width: 200px;
+    font-size: 21px;
+}
+
+.project-content {
+    visibility: hidden;
+}
+
+.project-content p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.project-content button {
+    margin-top: 10px;
+}
+
+.total-projects {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.total-projects .project {
+    width: 100%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.overlay .project {
+    box-shadow: 0.5px 0.5px 5px 0 rgb(224, 193, 15);
+}
+
+.btn-fechar {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 26px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Largura da barra */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Fundo da barra (trilho) */
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 10px;
+}
+
+/* Barra em si */
+::-webkit-scrollbar-thumb {
+    background: rgb(155, 135, 21);
+    border-radius: 10px;
+}
+
+.line-experience {
+    width: 80%;
+    margin: 100px auto;
+    background-color: rgb(155, 135, 21);
+    height: 3px;
+}
+
+.line-contact {
+    width: 80%;
+    margin: 100px auto 0;
+    background-color: rgb(155, 135, 21);
+    height: 3px;
+}
+
+.experience-area {
+    width: 100%;
+    margin-top: 6%;
+    color: white;
+}
+
+.experience-area>h1 {
+    font-size: 44px;
+    font-weight: 900;
+    margin-left: 60px;
+    padding-top: 10px;
+    border-bottom: rgb(211, 181, 12) 2px solid;
+    width: 250px;
+    padding-bottom: 5px;
+}
+
+.experience-area .experiences {
+    width: 60%;
+    margin: auto;
+    gap: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-area .experiences .experience .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(224, 193, 15);
+    box-shadow: 1px 1px 10px 0 rgb(224, 193, 15);
+    position: relative;
+    top: 16px;
+    right: 8px;
+}
+
+.experience-area .experiences .experience .date {
+    display: inline-block;
+    background-color: #555;
+    /* Cor de fundo parecida */
+    color: white;
+    /* Cor do texto */
+    font-size: 12px;
+    /* Tamanho compacto */
+    font-weight: 900;
+    padding: 4px 10px;
+    position: relative;
+    border-radius: 2px 0 0 2px;
+    /* Cantos levemente arredondados à esquerda */
+    position: relative;
+    top: 37px;
+    left: -70px;
+}
+
+.content-experience {
+    border-left: 3px solid #FFFFFF;
+    padding: 0 0 0 30px;
+    font-size: 20px;
+    color: rgb(207, 207, 207);
+}
+
+.experience-area .experiences .experience>h1 {
+    position: relative;
+    left: 30px;
+    bottom: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.experience-area .experiences .experience .content-experience>h2 {
+    font-size: 26px;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.contact {
+    width: 100%;
+    margin-top: -50px;
+    color: white;
+}
+
+/* TÍTULO */
+.contact>h1 {
+    font-size: 44px;
+    font-weight: 900;
+    margin-left: 60px;
+    padding-top: 180px;
+    border-bottom: rgb(211, 181, 12) 2px solid;
+    width: 180px;
+    padding-bottom: 5px;
+}
+
+/* ÁREA PRINCIPAL */
+.contact .contact-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    width: 100%;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* FORMULÁRIO */
+.contact .contact-area .contact-input {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* CONTAINER INPUT */
+.contact .contact-area .container-contact {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* INPUT E TEXTAREA */
+.contact .contact-area .container-contact input,
+.contact .contact-area .container-contact textarea {
+    width: 100%;
+    background-color: transparent;
+    font-size: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 30px;
+    height: 50px;
+    color: #fff;
+}
+
+/* TEXTAREA */
+.contact .contact-area .container-contact textarea {
+    padding-top: 25px;
+    resize: none;
+    height: 180px;
+}
+
+/* LABEL */
+.contact .contact-area .container-contact .labelline {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+    padding: 0 8px;
+    background-color: #252930;
+    transition: 0.2s ease;
+    pointer-events: none;
+}
+
+/* FOCO */
+.contact .contact-area .container-contact input:focus,
+.contact .contact-area .container-contact textarea:focus {
+    border-color: rgb(211, 181, 12);
+}
+
+/* LABEL FLUTUANTE */
+.contact .contact-area .container-contact input:focus+.labelline,
+.contact .contact-area .container-contact input:not(:placeholder-shown)+.labelline,
+.contact .contact-area .container-contact textarea:focus+.labelline,
+.contact .contact-area .container-contact textarea:not(:placeholder-shown)+.labelline {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: rgb(211, 181, 12);
+}
+
+/* BOTÃO */
+.contact .contact-area .send-email {
+    background-color: transparent;
+    border: 3px rgb(255, 217, 0) solid;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    font-weight: 800;
+    position: relative;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100px;
+    font-size: 20px;
+}
+
+.contact .contact-area .send-email:hover {
+    background-color: rgb(255, 217, 0);
+    color: rgb(0, 0, 0);
+    box-shadow: 11px 11px 5px 0 rgb(0, 0, 0);
+    transition: 0.6s;
+}
+
+/* IMAGEM */
+.contact .contact-area .contact-img {
+    width: 100%;
+    max-width: 450px;
+    height: 550px;
+    background-image: url("../images/foto-contato.JPG");
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    bottom: 100px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .contact .contact-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .contact-area .contact-img {
+        display: none;
+    }
+
+    .contact {
+        padding-bottom: 180px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contact .contact-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .contact-area .contact-img {
+        display: none;
+    }
+
+    .contact {
+        padding-bottom: 180px;
+    }
+}
