@@ -28,16 +28,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: transparent;
+    transition: background 0.4s ease, padding 0.4s ease;
+}
+
+.bateu_a_cara_e_viu header.scrolled {
+    background: #252930;
+    padding: 8px 10%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .bateu_a_cara_e_viu header img {
     width: 130px;
-
+    z-index: 1001;
 }
 
 .bateu_a_cara_e_viu nav ul {
     display: flex;
     gap: 40px;
+    list-style: none;
 }
 
 .bateu_a_cara_e_viu nav ul li a:hover {
@@ -50,7 +63,41 @@ body {
     color: rgb(207, 207, 207);
     font-weight: 700;
     font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
+
+/* Botão Hambúrguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: rgb(207, 207, 207);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+    background: rgb(255, 217, 0);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+    background: rgb(255, 217, 0);
+}
+
 
 .redes_sociais {
     position: absolute;
@@ -684,5 +731,105 @@ body {
 
     .contact {
         padding-bottom: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .bateu_a_cara_e_viu nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .bateu_a_cara_e_viu nav.active {
+        right: 0;
+    }
+
+    .bateu_a_cara_e_viu nav ul {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .bateu_a_cara_e_viu nav a {
+        font-size: 24px;
+        display: block;
+        padding: 10px 20px;
+    }
+
+    .bateu_a_cara_e_viu nav ul li {
+        opacity: 0;
+        transform: translateX(50px);
+        transition: all 0.3s ease;
+    }
+
+    .bateu_a_cara_e_viu nav.active ul li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .bateu_a_cara_e_viu nav.active ul li:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .bateu_a_cara_e_viu nav.active ul li:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .bateu_a_cara_e_viu nav.active ul li:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .bateu_a_cara_e_viu nav.active ul li:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+    .bateu_a_cara_e_viu nav.active ul li:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+
+    /* Overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 480px) {
+    .bateu_a_cara_e_viu header {
+        padding: 10px 5%;
+    }
+
+    .bateu_a_cara_e_viu header img {
+        width: 100px;
+    }
+
+    .bateu_a_cara_e_viu nav {
+        width: 80%;
     }
 }

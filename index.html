@@ -19,11 +19,19 @@
 <body>
 
     <main>
-        <div class="bateu_a_cara_e_viu">
+        <div class="bateu_a_cara_e_viu" id="inicio">
 
+            <div class="overlay" id="overlay"></div>
             <header>
-                <img src="images/playboy.png" alt="">
-                <nav>
+                <a href="#inicio"><img src="images/playboy.png" alt="Logo"></a>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav id="nav">
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
@@ -32,8 +40,6 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-
-
             </header>
 
             <div class="about-perfil">
@@ -177,8 +183,8 @@
                 <button id="fecharOverlay" class="btn-fechar">X</button>
                 <div class="total-projects" id="total-projects">
 
-                    <div class="project" style="--background: url('images/netflix.png')"
-                        onmouseover="exibirContent(0)" onmouseout="esconderContentOverlay(0)">
+                    <div class="project" style="--background: url('images/netflix.png')" onmouseover="exibirContent(0)"
+                        onmouseout="esconderContentOverlay(0)">
                         <div class="project-content-overlay">
                             <h1>Netflix</h1>
                             <p>Mini cópia da Netflix, onde é possível ver alguns títulos que a própria tem em seu app.
@@ -187,8 +193,8 @@
                         </div>
                     </div>
 
-                    <div class="project" style="--background: url('images/carros.png')"
-                        onmouseover="exibirContent(1)" onmouseout="esconderContentOverlay(1)">
+                    <div class="project" style="--background: url('images/carros.png')" onmouseover="exibirContent(1)"
+                        onmouseout="esconderContentOverlay(1)">
                         <div class="project-content-overlay">
                             <h1>Carros</h1>
                             <p>Um site que mostra alguns carros de luxo de marcas famosas, exibindo informações de como
@@ -300,7 +306,16 @@
         </div>
 
     </main>
-</body>
-<script src="portfolio.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
+    <script>
+        (function () {
+            emailjs.init("MNYT2ZWMI6e2Ns7fl");
+        })();
+    </script>
+
+    <!-- Seu JS -->
+    <script src="portfolio.js"></script>
+</body>
 </html>
